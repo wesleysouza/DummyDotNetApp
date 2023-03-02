@@ -1,0 +1,12 @@
+{
+    "sensitive-data-filters": [ {
+        "applies-to": "environment-variables,system-properties",
+        "match-type": "CONTAINS",
+        "match-pattern": "",
+        "redaction-regex": "[\\d\\D]"
+    }
+    ],
+    "feature": [
+        "FULL_AGENT"
+    ]
+}

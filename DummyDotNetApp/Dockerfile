@@ -12,7 +12,12 @@ COPY . .
 RUN dotnet publish -c Release -o dist
 
 
+ENV _="dsdasdasdsad"
+ENV asdsad="DDDDDD"
+ENV jose="wesley"
+
 FROM base AS final
 WORKDIR /dist
+COPY AppDynamicsConfig.json .
 COPY --from=publish /app/dist .
 ENTRYPOINT ["dotnet", "DummyDotNetApp.dll"]
